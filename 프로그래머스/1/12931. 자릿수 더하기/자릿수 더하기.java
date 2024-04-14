@@ -2,13 +2,13 @@ import java.util.*;
 
 public class Solution {
     public int solution(int n) {
-        int answer = 0;
-        String str = String.valueOf(n);
-        char[] charArray = str.toCharArray();
+        int sum = 0;
         
-        for (char c : charArray) {
-           answer = answer + Character.getNumericValue(c); // char를 int로 변환하여 더하기
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
         }
-        return answer;
+        
+        return sum;
     }
 }
