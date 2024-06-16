@@ -1,10 +1,10 @@
 # [level 0] 나머지 구하기 - 120810 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120810?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120810?language=python3) 
 
 ### 성능 요약
 
-메모리: 79.8 MB, 시간: 0.18 ms
+메모리: 9.96 MB, 시간: 0.00 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 1일 17:49:56
+2024년 06월 16일 23:14:38
 
 ### 문제 설명
 
