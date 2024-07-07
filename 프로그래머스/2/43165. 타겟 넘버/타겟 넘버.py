@@ -1,10 +1,17 @@
+from collections import deque
+
 def solution(numbers, target):
-    def dfs(index, current_sum):
-        # 모든 숫자를 다 사용했을 때
-        if index == len(numbers):
-            # 현재 합이 타겟과 같은 경우 방법의 수를 1 증가
-            return 1 if current_sum == target else 0
-        # 현재 숫자를 더하거나 뺀 두 가지 경우를 재귀적으로 탐색
-        return dfs(index + 1, current_sum + numbers[index]) + dfs(index + 1, current_sum - numbers[index])
+    queue = deque([(0, 0)])  # (현재 인덱스, 현재 합)
+    count = 0
     
-    return dfs(0, 0)
+    while queue:
+        index, current_sum = queue.popleft()
+        
+        if index == len(numbers):
+            if current_sum == target:
+                count += 1
+        else:
+            queue.append((index + 1, current_sum + numbers[index]))
+            queue.append((index + 1, current_sum - numbers[index]))
+    
+    return count
