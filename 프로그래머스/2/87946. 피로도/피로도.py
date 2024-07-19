@@ -1,19 +1,27 @@
-from typing import List, Tuple
+def solution(k, dungeons):
+    # 기본값 세팅
+    n = len(dungeons)
+    visited = [0] * n
+    answer = 0
 
+    def backtracking(k, count):
+        # 최대 count를 answer에 저장
+        nonlocal answer
+        if count > answer:
+            answer = count
 
-def solution(k: int, dungeons: List[Tuple[int, int]]) -> int:
-    max_dungeons = [0]
+        # dungeons 순회
+        for i in range(n):
 
-    def backtracking(curr_count: int, remaining_k: int, visited: List[bool]):
-        # 최대 던전 수 갱신
-        if curr_count > max_dungeons[0]:
-            max_dungeons[0] = curr_count
-
-        for i in range(len(dungeons)):
-            if not visited[i] and remaining_k >= dungeons[i][0]:
+            # 1. 방문한 적 없고
+            # 2. 현재 피로도가 던전의 필요 피로도보다 크거나 같으면
+            if not visited[i] and k >= dungeons[i][0]:
+                # i번째 원소 방문
                 visited[i] = True
-                backtracking(curr_count + 1, remaining_k - dungeons[i][1], visited)
+                # 백트래킹 함수 호출
+                backtracking(k - dungeons[i][1], count + 1)
+                # i번째 원소 pop
                 visited[i] = False
 
-    backtracking(0, k, [False] * len(dungeons))
-    return max_dungeons[0]
+    backtracking(k, 0)
+    return answer
