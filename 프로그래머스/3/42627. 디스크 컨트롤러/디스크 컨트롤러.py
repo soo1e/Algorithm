@@ -1,6 +1,5 @@
 import heapq
 
-
 def solution(jobs):
     # 작업이 요청되는 시점이 빠른 순서로 정렬
     jobs.sort()
