@@ -2,6 +2,7 @@ from collections import deque
 
 # 이동 가능한 경우의 수 확인하는 함수
 def get_next_pos(cur_pos, new_board):
+    
     next_pos = []
     pos = list(cur_pos)
     lx, ly, rx, ry = pos[0][0], pos[0][1], pos[1][0], pos[1][1]
