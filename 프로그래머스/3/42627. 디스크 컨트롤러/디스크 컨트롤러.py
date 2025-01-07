@@ -26,6 +26,7 @@ def solution(jobs):
             current_time += duration
             total_response_time += current_time - start
             completed_jobs += 1
+            
         # 현재 시간 업데이트
         else:      # 처리할 작업이 없다면 현재 시간 증가
             current_time = jobs[jobs_idx][0]
