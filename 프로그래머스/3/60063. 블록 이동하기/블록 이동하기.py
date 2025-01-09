@@ -6,6 +6,7 @@ def get_next_pos(cur_pos, new_board):
     next_pos = []
     pos = list(cur_pos)
     lx, ly, rx, ry = pos[0][0], pos[0][1], pos[1][0], pos[1][1]
+    
     # 상하좌우 이동이 가능한 경우를 구한다.
     for dx, dy in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
         nlx, nly, nrx, nry = lx+dx, ly+dy, rx+dx, ry+dy
@@ -28,7 +29,9 @@ def get_next_pos(cur_pos, new_board):
     return next_pos
 
 def solution(board):
+    
     n = len(board)
+    
     # 인덱싱의 편의를 위해 원본 배열에 상하좌우로 한 칸씩 늘린 새 배열을 만든다.
     new_board = [[1 for _ in range(n+2)] for _ in range(n+2)]
 
