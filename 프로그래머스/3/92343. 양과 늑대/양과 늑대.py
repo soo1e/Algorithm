@@ -1,4 +1,5 @@
 def solution(info, edges):
+    
     # 방문을 체크할 수 있는 배열을 선언한다.
     visited = [0] * len(info)
     answer = []
