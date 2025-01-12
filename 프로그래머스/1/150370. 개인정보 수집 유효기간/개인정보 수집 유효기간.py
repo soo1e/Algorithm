@@ -1,4 +1,5 @@
 def calculate_expiry_date(start_date, months):
+    
     year, month, day = map(int, start_date.split('.'))
     month += months
     year += (month - 1) // 12
