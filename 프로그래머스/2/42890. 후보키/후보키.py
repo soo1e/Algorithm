@@ -2,6 +2,7 @@ from itertools import combinations
 from typing import List
 
 def solution(relation: List[List[str]]) -> int:
+    
     row_len = len(relation)
     col_len = len(relation[0])
     candidate_keys = []
