@@ -1,6 +1,7 @@
 from collections import deque
 
 def solution(queue1, queue2):
+    
     # 주어진 큐를 deque를 통해 q1, q2 생성
     q1 = deque(queue1)
     q2 = deque(queue2)
