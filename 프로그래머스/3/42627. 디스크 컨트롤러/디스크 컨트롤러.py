@@ -21,6 +21,7 @@ def solution(jobs):
         # 우선순위 큐를 이용해서 소요시간이 가장 적은 작업 선택
         # 작업의 요청부터 종료까지 걸린 시간을 더한다.
         # 현재 시간 업데이트
+        
         if heap:   # 처리할 작업이 있으면 처리
             duration, start = heapq.heappop(heap)
             current_time += duration
