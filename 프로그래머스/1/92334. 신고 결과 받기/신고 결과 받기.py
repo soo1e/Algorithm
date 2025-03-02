@@ -1,4 +1,5 @@
 def solution(id_list, report, k):
+    
     # 1. 신고 기록 정리 (중복 제거)
     report_dict = {user: set() for user in id_list}
     for rep in report:
