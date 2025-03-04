@@ -1,6 +1,7 @@
 import re
 
 def solution(new_id):
+    
     # 1단계: 모든 대문자를 소문자로 치환
     new_id = new_id.lower()
     
