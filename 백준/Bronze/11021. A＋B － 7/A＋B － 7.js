@@ -8,7 +8,9 @@
 // const input = require('fs').readFileSync('input.txt').toString().trim().split('\n');
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
-for (let i = 1; i <= input[0]; i++) {
+const T = parseInt(input[0]);
+
+for (let i = 1; i <= T; i++) {
     const [A, B] = input[i].split(' ').map(Number);
-    console.log("Case #" + i + ": " + (parseInt(A)+ parseInt(B)));
+    console.log(`Case #${i}: ${A + B}`);
 }
