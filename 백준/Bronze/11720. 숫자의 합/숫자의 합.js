@@ -5,17 +5,16 @@
  */
 
 /**
- * 54321 ? 나누기를 써야할지 나머지를 써야할지.. -> 가장 베스트는 JS의 문자열 특성을 활용해서 푼거임
+ * 54321 ? 나누기를 써야할지 나머지를 써야할지..
  */
 // const input = require('fs').readFileSync('input.txt').toString().trim().split('\n');
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
-const T = parseInt(input[0]);
-const numbers = input[1];
-let num = 0;
+const numbers = input[1].split('').map(Number);
+let sum = 0;
 
-for (let i = 0; i < T; i++) {
-    num = num + Number(numbers[i]);
+for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
 }
 
-console.log(num);
+console.log(sum)
