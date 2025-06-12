@@ -1,5 +1,6 @@
 import heapq
 
+
 def solution(jobs):
     # 작업이 요청되는 시점이 빠른 순서로 정렬
     jobs.sort()
@@ -21,16 +22,16 @@ def solution(jobs):
         # 우선순위 큐를 이용해서 소요시간이 가장 적은 작업 선택
         # 작업의 요청부터 종료까지 걸린 시간을 더한다.
         # 현재 시간 업데이트
-        
         if heap:   # 처리할 작업이 있으면 처리
             duration, start = heapq.heappop(heap)
             current_time += duration
             total_response_time += current_time - start
             completed_jobs += 1
-            
         # 현재 시간 업데이트
         else:      # 처리할 작업이 없다면 현재 시간 증가
+            
             current_time = jobs[jobs_idx][0]
 
     # 총 대기 시간의 평균을 계산하여 반환 (소수점 이하 버림)
+    
     return total_response_time // completed_jobs
