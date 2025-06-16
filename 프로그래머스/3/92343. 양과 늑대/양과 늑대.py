@@ -1,5 +1,4 @@
 def solution(info, edges):
-    
     # 방문을 체크할 수 있는 배열을 선언한다.
     visited = [0] * len(info)
     answer = []
@@ -24,6 +23,7 @@ def solution(info, edges):
                     dfs(sheep, wolf + 1)
                 # 다음 노드를 방문표시 해제한다.
                 visited[c] = False
+                
     # 0번 노드를 방문한 상태로 시작한다.
     visited[0] = True
     # DFS를 시작한다.
