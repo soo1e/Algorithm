@@ -1,6 +1,7 @@
 import heapq
 
 def solution(n, s, a, b, fares):
+    
 		#✅ 인풋을 본인이 쓰기 편한 구조로 바꾸기(다익스트라) => 무방향 그래프 만들기
     graph = [[] for _ in range(n+1)]
     for u, v, w in fares:
